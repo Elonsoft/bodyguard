@@ -8,4 +8,5 @@ end
 
 defimpl Plug.Exception, for: Bodyguard.NotAuthorizedError do
   def status(exception), do: exception.status || 403 # Forbidden
+  def actions(_), do: []
 end
